@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory</title>
+
+    <!-- Mobile/Browser Compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<!-- Nav Bar (Remember, main page needs just header. After User logs in then add nav bar) -->
+<!--       <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul> -->
+
+
+    <nav class="nav-extended">
+        <div class="nav-wrapper black text-white">
+            <a href="#" class="brand-logo">Inventory</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down"> -->
+                <li><a href="#">Username Placeholder</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+            <!-- <ul class="side-nav text-white" id="mobile-demo"> -->
+            <ul id="slide-out" class="side-nav text-white">
+                <li><a href="#">Search</a></li>
+                <!-- Search Bar
+                    <li><form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form></li>
+                -->
+                <li><div class="divider"></div></li>
+                <li><a href="#">Update Inventory</a></li>
+                <li><div class="divider"></div></li>
+                <li><a href="#">View All Inventory</a></li>
+                <li><div class="divider"></div></li>
+            </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+<!--         </div>
+    </nav> -->
+
+<!-- Main Body --> 
+<div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel black">
+        <span class="white-text">I am a placeholder card to show content on the page as other sections around me are manipulated.
+        </span>
+      </div>
+    </div>
+</div>
+
+<!-- Footer --> 
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- Personal JS -->
+    <script src="/assets/js/inventory.js"></script>
+
+    <!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+    <!-- Reg JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+
+    <!-- PAGE JS -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("select").material_select();
+    })
+    $(document).ready(function() {
+        $(".button-collapse").sideNav();
+    })
+
+    // $(document).ready(function(){
+    // $('.sidenav').sidenav();
+    // });
+
+    </script>
+    
+</body>
+
+</html>
