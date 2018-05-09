@@ -1,16 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <meta charset="UTF-8">
+
+<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Come Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+    <!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
     <title>Inventory</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/inventory.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/inventory.js"></script>
+</head>
+
+<body>
+    <!-- {{{ body }}} -->
+
+<!-- Nav Bar (Remember, main page needs just header. After User logs in then add nav bar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+
+
+ 	<nav class="nav-extended">
+        <div class="nav-wrapper light-green darken-3">
+            <a href="index.html" class="brand-logo">Inventory</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="lostForm.html">Search</a></li>
+                <li><a href="lostList.html">Found a lost pet</a></li>
+                <li><a href="breedType.html">Breeds</a></li>
+                <li><a href="mapView.html">Map</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+            <ul class="side-nav orange lighten-5" id="mobile-demo">
+                <li><a href="index.html">Come Home</a></li>
+                <li><a href="lostForm.html">Report a lost pet</a></li>
+                <li><a href="lostList.html">Found a lost pet</a></li>
+                <li><a href="breedType.html">Breeds</a></li>
+                <li><a href="mapView.html">Map</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+<!-- Login Card -->
+  <div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel teal">
+        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+
+	<form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Placeholder" id="user_name" type="text" class="validate">
+          <label for="user_name">User Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          	<input id="password" type="password" class="validate">
+          	<label for="password">Password</label>
+        </div>
+      </div>
+    </form>
+
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Footer --> 
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("select").material_select();
+    })
+    $(document).ready(function() {
+        $(".button-collapse").sideNav();
+    })
+    </script>
+</body>
+
 </html>

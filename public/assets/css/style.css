@@ -1,3 +1,35 @@
 body {
-background-image: url('..images/background1.jpg');
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('../../images/background1.jpg');
+  }
+
+main {
+  	flex: 1 0 auto;
+  }
+
+nav {
+
 }
+
+#login-card {
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+
+.input-field label {
+    color: black;
+   }
+
+.input-field input[type=text]:focus + label {
+	color: black;
+  }
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+  }
+      
