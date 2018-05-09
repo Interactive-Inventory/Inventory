@@ -18,3 +18,7 @@ $("#add-btn").on("click", function(event){
   $("#color").val();
 
 });
+
+$.get("/api/all", function(data){
+
+})

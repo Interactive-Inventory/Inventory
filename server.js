@@ -5,8 +5,10 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var db = require("./models");
+// var db = require("./models");
 var bodyParser = require("body-parser");
+// Set Handlebars.
+var exphbs = require("express-handlebars");
 
 // Sets up the Express App
 // =============================================================
@@ -14,7 +16,34 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-var db = require("./models/inventory");
+var db = require("./models/inventory.js");
+
+
+
+
+
+var hbs = exphbs.create({
+  // Specify helpers which are only registered on this instance.
+  helpers: {
+      math: function (lvalue, operator, rvalue, options) {
+        lvalue = parseFloat(lvalue);
+        rvalue = parseFloat(rvalue);
+            
+        return {
+            "+": lvalue + rvalue,
+            "-": lvalue - rvalue,
+            "*": lvalue * rvalue,
+            "/": lvalue / rvalue,
+            "%": lvalue % rvalue
+        }[operator];
+    }
+    
+  },
+  defaultLayout: "main"
+});
+
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 
 // Sets up the Express app to handle data parsing
@@ -33,11 +62,11 @@ app.use(express.static("app/public"));
 // =============================================================
 // require("./controllers/invenController.js")(app);
 // require("./app/routes/api-routes.js")(app);
-// require("./app/routes/html-routes.js")(app);
+routes = require("./routes/html-routes.js")(app);
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync().then(function() {
+// db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-});
+// });

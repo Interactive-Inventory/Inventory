@@ -38,7 +38,7 @@ var Inventory = sequelize.define("inventory", {
     type: Sequelize.INTEGER
   },
 }, {
-  timestamps: false
+  timestamps: true
 });
 
 // Syncs with DB
