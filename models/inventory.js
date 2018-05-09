@@ -8,6 +8,11 @@ var sequelize = require("../config/connection.js");
 
 // Creates an "Inventory" model that matches up with DB
 var Inventory = sequelize.define("inventory", {
+  id: {
+    type: Sequelize. INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
   item: {
     type: Sequelize.STRING
   },
