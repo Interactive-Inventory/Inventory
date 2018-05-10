@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+
 # Dependency directories
 node_modules/
 
 # Files
 package-lock.json
+
+=======
+node_modules
+>>>>>>> 4adf199c373a8604f861bfdb8867b2f2850b7de0

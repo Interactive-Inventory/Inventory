@@ -6,8 +6,8 @@
 // =============================================================
 var path = require("path");
 var inventory = require("../models/inventory.js");
-var express = require("express");
-var router = express.Router();
+
+
 
 // Routes
 // =============================================================
@@ -20,14 +20,22 @@ module.exports = function(app) {
   //   res.send('hello');
   // });
 
-  router.get("/", function(req, res) {
-    // inventory.all(function(data) {
+
+  // app.get("/", function(req, res) {
+  //     res.render(path.join(__dirname, "index", hbsObject ));
+  //   });
+  
+  app.get("/", function(req, res) {
+    inventory.findAll({})
+    .then(function(data) {
+      console.log(data[0].item);
       var hbsObject = {
+        Inventory: data
       };
 
-      console.log(hbsObject);
+      // console.log(hbsObject);
       res.render("index", hbsObject);
-    // });
+    });
   });
 
   // app.get("/search", function(req, res) {
@@ -38,9 +46,15 @@ module.exports = function(app) {
   // app.get("/update", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/update.html"));
   // });
-
+// 
   // app.get("/all", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/all.html"));
   // });
+
+  // index route loads view.html
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/home.html"));
+  // });
+
 
 };
