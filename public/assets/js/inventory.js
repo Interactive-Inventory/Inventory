@@ -1,9 +1,9 @@
 
  
 // Nav bar function
- // $(document).ready(function(){
- //    $('.sidenav').sidenav();
- //  });
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 
 
 // <script type="text/javascript">
