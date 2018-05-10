@@ -17,7 +17,7 @@ var Inventory = sequelize.define("inventory", {
     type: Sequelize.STRING
   },
   category: {
-    type: Sequelize.INTEGER
+    type: Sequelize.STRING
   },
   size: {
     type: Sequelize.INTEGER
@@ -31,8 +31,8 @@ var Inventory = sequelize.define("inventory", {
   received: {
     type: Sequelize.BOOLEAN
   },
-}, {
-  timestamps: true
+  }, {
+  timestamps: false
 });
 
 // Syncs with DB

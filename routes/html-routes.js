@@ -25,17 +25,18 @@ module.exports = function(app) {
   //     res.render(path.join(__dirname, "index", hbsObject ));
   //   });
   
-  // app.get("/", function(req, res) {
-  //   inventory.findAll({})
-  //   .then(function(data) {
-  //     var hbsObject = {
-  //       Inventory: data
-  //     };
+  app.get("/", function(req, res) {
+    inventory.findAll({})
+    .then(function(data) {
+      console.log(data[0].item);
+      var hbsObject = {
+        Inventory: data
+      };
 
-  //     console.log(hbsObject);
-  //     res.render("index", hbsObject);
-  //   });
-  // });
+      // console.log(hbsObject);
+      res.render("index", hbsObject);
+    });
+  });
 
   // app.get("/search", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/search.html"));
@@ -51,9 +52,9 @@ module.exports = function(app) {
   // });
 
   // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-  });
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/home.html"));
+  // });
 
 
 };
