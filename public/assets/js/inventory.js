@@ -7,14 +7,27 @@
 
 
 // <script type="text/javascript">
-$(document).ready(function() {
-    $("select").material_select();
+// $(document).ready(function() {
+//     $("select").material_select();
+// })
+
+// $(document).ready(function() {
+//     $(".button-collapse").sideNav();
+// })
+// </script>
+
+(function($){
+  $(function(){
+
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+	 $('.slider').slider({full_width: true});
+
+  }); // end of document ready
 })
 
-$(document).ready(function() {
-    $(".button-collapse").sideNav();
-})
-// </script>
+
+
 
 $("#add-btn").on("click", function(event){
   event.preventDefault();
