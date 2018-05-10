@@ -25,17 +25,11 @@ var Inventory = sequelize.define("inventory", {
   color: {
     type: Sequelize.STRING
   },
-  startCount: {
-    type: Sequelize.INTEGER
-  },
-  endCount: {
-    type: Sequelize.INTEGER
-  },
-  used: {
+  quantity: {
     type: Sequelize.INTEGER
   },
   received: {
-    type: Sequelize.INTEGER
+    type: Sequelize.BOOLEAN
   },
 }, {
   timestamps: true
