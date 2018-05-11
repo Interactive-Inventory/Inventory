@@ -2,33 +2,33 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url('../../images/background1.jpg');
+    /*background-image: url('../../images/background1.jpg');*/
   }
 
 main {
   	flex: 1 0 auto;
   }
 
+<<<<<<< HEAD
 nav { */
 
 /* }
 
 #login-card {
+=======
+
+.login-card {
+>>>>>>> Thea
 	align-items: center;
 	justify-content: center;
 	align-content: center;
 }
 
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+.brandlogo {
+	#justify-content: flex-end;
+	#align-content: flex-end;
 }
 
-main {
-  flex: 1 0 auto;
-} */
-    
 
 
 .input-field label {
