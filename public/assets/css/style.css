@@ -9,16 +9,8 @@ main {
   	flex: 1 0 auto;
   }
 
-<<<<<<< HEAD
-nav { */
-
-/* }
-
-#login-card {
-=======
 
 .login-card {
->>>>>>> Thea
 	align-items: center;
 	justify-content: center;
 	align-content: center;
