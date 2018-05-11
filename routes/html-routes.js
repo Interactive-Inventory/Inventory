@@ -30,11 +30,26 @@ module.exports = function(app) {
     .then(function(data) {
       console.log(data[0].item);
       var hbsObject = {
-        Inventory: data
+        Inventory: data,
+        layout:false
       };
 
       // console.log(hbsObject);
       res.render("index", hbsObject);
+    });
+  });
+
+  app.get("/inventory", function(req, res) {
+    inventory.findAll({})
+    .then(function(data) {
+      console.log(data[0].item);
+      var hbsObject = {
+        Inventory: data,
+        layout:false
+      };
+
+      // console.log(hbsObject);
+      res.render("inventory", hbsObject);
     });
   });
 
