@@ -1,4 +1,4 @@
-body {
+/* body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -9,15 +9,26 @@ main {
   	flex: 1 0 auto;
   }
 
-nav {
+nav { */
 
-}
+/* }
 
 #login-card {
 	align-items: center;
 	justify-content: center;
 	align-content: center;
 }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+} */
+    
 
 
 .input-field label {
@@ -33,3 +44,7 @@ nav {
     box-shadow: 0 1px 0 0 black;
   }
       
+
+#footer{
+  text-align: center; important: !;
+ }
