@@ -61,3 +61,7 @@ footer {
   display: block;
   clear: both;
 }
+
+.input-field {
+  color:blue !important;
+}  

@@ -90,6 +90,10 @@ module.exports = function (app) {
       console.log(error);
     });
 
+    app.post('/api/inventory', function (req, res) {
+      res.send('POST request to the homepage')
+    })
+
     // var searchTerm = req.params.id;
     // inventory.findAll({})
     //   .then(function (data) {

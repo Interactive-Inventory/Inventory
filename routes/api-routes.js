@@ -27,6 +27,23 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+  // app.post("/inventory/item/", function (req, res) {
+  //   // inventory.findAll({})
+  //   //   .then(function (data) {
+  //   //     console.log(data[0].item);
+  //   //     var hbsObject = {
+  //   //       Inventory: data,
+  //   //       layout: false
+  //   //     };
+
+  //   //     // console.log(hbsObject);
+        
+  //   //   });
+    
+  //     console.log(req.body)
+  //     // res.json({result: 'result data'});
+  // });
+
   // GET route for getting all of the items
   // app.get("/api/inventory/", function(req, res) {
   //   db.Post.findAll({})
@@ -35,14 +52,14 @@ module.exports = function(app) {
   //     });
   // });
 
-  // GET route for getting all of the inventory
-  app.get("/api/inventory", function(req, res) {
-    // findAll returns all entries for a table when used with no options
-    db.Post.findAll({}).then(function(dbPost) {
-      // We have access to the inventory as an argument inside of the callback function
-      res.json(dbPost);
-    });
-  });
+  // // GET route for getting all of the inventory
+  // app.get("/api/inventory", function(req, res) {
+  //   // findAll returns all entries for a table when used with no options
+  //   db.Post.findAll({}).then(function(dbPost) {
+  //     // We have access to the inventory as an argument inside of the callback function
+  //     res.json(dbPost);
+  //   });
+  // });
 
   // // Using the passport.authenticate middleware with our local strategy.
   // // If the user has valid login credentials, send them to the members page.
