@@ -1,9 +1,4 @@
-/* body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    /*background-image: url('../../images/background1.jpg');*/
-  }
+
 
 main {
   	flex: 1 0 auto;
@@ -17,8 +12,8 @@ main {
 }
 
 .brandlogo {
-	#justify-content: flex-end;
-	#align-content: flex-end;
+	justify-content: flex-end;
+	align-content: flex-end;
 }
 
 
@@ -37,6 +32,32 @@ main {
   }
       
 
-#footer{
-  text-align: center; important: !;
- }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('../../images/backgroundThree.jpg');
+  }
+
+main {
+  	flex: 1 0 auto;
+  }
+
+
+#login-card {
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 99%;
+}
+
+  .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}

@@ -13,12 +13,15 @@
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <!-- Personal -->
-  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   <!-- ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Scripts JS -->
-  <script src="assets/js/inventory.js"></script> {{!-- </head>
+  <script src="assets/js/inventory.js"></script>
+
+
+  {{!-- </head>
 <!--Nav Bar-->
 <nav>
   <div class="nav-wrapper black">
@@ -85,68 +88,65 @@
 
 <body>
   <nav>
-    <div class="nav-wrapper black">
-      <div class="row">
-        <div class="col s12">
-          <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
-            <i class="material-icons">menu</i>
-          </a>
-          <!-- <a href="#" target="_blank" class="brand-logo"> -->
-          <h5 class="brand-logo">John McKay Custom&trade; Inventory Management System</h5>
-          <!-- </a> -->
-          <!-- <h6 class="sub-name">Inventory Management System</h6> -->
-        </div>
+  <div class="nav-wrapper black">
+    <div class="row">
+      <div class="col s12">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        <!-- <a href="#" target="_blank" class="brand-logo"> -->
+        <h5 class="brand-logo">John McKay Custom&trade; Inventory Management System</h5>
+        <!-- </a> -->
+        <!-- <h6 class="sub-name">Inventory Management System</h6> -->
       </div>
     </div>
-  </nav>
-  <ul id="slide-out" class="sidenav">
-    <li>
-      <div class="user-view">
-        <div class="background">
-          <img src="http://placehold.it/1024x512/454545">
-        </div>
-        <a href="#user">
-          <img class="circle" src="http://placehold.it/64">
-        </a>
-        <a href="#name">
-          <span class="white-text name">John McKay</span>
-        </a>
-        <a href="#email">
-          <span class="white-text email">john@johnmckaycustom.com</span>
-        </a>
+  </div>
+</nav>
+<ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="http://placehold.it/1024x512/454545">
       </div>
-    </li>
+      <a href="#user"><img class="circle" src="http://placehold.it/64"></a>
+      <a href="#name"><span class="white-text name">John McKay</span></a>
+      <a href="#email"><span class="white-text email">john@johnmckaycustom.com</span></a>
+    </div></li>
     <!-- <li><a href="#">Search</a></li> -->
     <li>
-      <form id="searchbar">
-        <div class="input-field row">
-          <i class="material-icons prefix" style="margin-left: 2vh">search</i>
-          <input id="search" type="search" class="search-input col s12 center" placeholder="Search inventory">
+        <form id="searchbar">
+            <!-- <div class="input-field">
+                <input placeholder="Search..." id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            </div> -->
+
+            <!-- <div class="input-field" style="max-width: 300pt;">
+                <input id="search" type="search" placeholder="Search..." required onkeyup="getBlogs(this.value,0);">
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+                <div id="searchResults" ></div>
+            </div> -->
+
+            <!-- <li class="search"> <div class="search-wrapper card input-field">
+        <input type="search" placeholder="Search..." required onkeyup="getBlogs(this.value,1);">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
           <i class="material-icons">close</i>
+          <div id="searchResults2"></div>
+        </div></li> -->
+
+        <div class="input-field row">
+            <i class="material-icons prefix" style="margin-left: 2vh">search</i>
+            <input id="search" type="search" class="col s12 center" placeholder="Search inventory">
+            <i class="material-icons">close</i>
         </div>
 
 
-      </form>
+        </form>
     </li>
     <!-- <li><a class="waves-effect waves-light btn">Update Inventory</a></li> -->
-    <li>
-      <a class="modal-trigger" href="/form">Add Inventory</a>
-    </li>
-    <li>
-      <div class="divider"></div>
-    </li>
+    <li><a class="modal-trigger" href="/form">Add Inventory</a></li>
+    <li><div class="divider"></div></li>
     <!-- <li><a class="waves-effect waves-light btn">Update Inventory</a></li> -->
-    <li>
-      <a href="/inventory">View All</a>
-    </li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li>
-      <a class="subheader">
-        <a href="/">Logout</a>
-      </a>
-    </li>
+    <li><a href="/inventory">View All</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader"><a href="/">Logout</a></a></li>
   </ul>
 
   <!-- Main Body -->
@@ -217,44 +217,40 @@
 
 
   <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-  <!-- Personal JS -->
-  <!-- <script src="assets/js/inventory.js"></script> -->
+    <!-- Personal JS -->
+    <!-- <script src="assets/js/inventory.js"></script> -->
 
-  <!-- Ajax -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
+    <!-- Ajax -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
 
 
-  <!-- PAGE JS -->
-  <script type="text/javascript">
+    <!-- PAGE JS -->
+    <script type="text/javascript">
 
-    $(document).ready(function () {
-      // SIDENAV
-      $('.sidenav').sidenav();
-      $('.sidenav').sidenav('close');
-    });
+    $(document).ready(function(){
+    // SIDENAV
+    $('.sidenav').sidenav();
+    $('.sidenav').sidenav('close');
+});
 
     // UPDATE MODAL
-    $(document).ready(function () {
-      $('.modal').modal();
-      $('.search-input').keydown(function (event) {
-        if (event.keyCode == 13) {
-          window.location.replace('/inventory/:' + $('.search-input').val());
-          return false;
-        }
-      });
-    });
+    $(document).ready(function(){
+    $('.modal').modal();
+  });
 
+$("#search").on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        console.log(Text);
+    }
+});
 
-
-
-
-  </script>
-
+    </script>
+    
 </body>
 
 </html>
@@ -268,37 +264,37 @@
   var source = $("#some-template").html();
   var template = Handlebars.compile(source);
   var data = {
-    Inventory: [{
       Inventory: [{
-        item: {
-          Item: "Blue  Collar"
+            Inventory: [{
+                  item: {
+                    Item: "Blue  Collar"
                     Category: "Shirt"
                     Size: "L"
                     Color: "White"
                     Quanitity: "20"
                     Recieved: "Back Order"
-        },
+                  },
                   {
-        item: {
-          Item: "Red Collar"
+                    item: {
+                      Item: "Red Collar"
                       Category: "Shirt"
                       Size: "S"
                       Color: "White"
                       Quanitity: "5"
                       Recieved: "In Transit"
-        },
+                    },
                     {
-        item: {
-          Item: "Fitted drk_bl"
+                      item: {
+                        Item: "Fitted drk_bl"
                         Category: "Pants"
                         Size: "M"
                         Color: "Navy"
                         Quanitity: "0"
                         Recieved: "By End Of Day"
-        }]
-    };
-    // Handlebars.registerHelper('Item', function(person) {
-    //     return person.firstName + " " + person.lastName;
-    // });
-    $('body').append(template(data));
+                      }]
+                  };
+                  // Handlebars.registerHelper('Item', function(person) {
+                  //     return person.firstName + " " + person.lastName;
+                  // });
+                  $('body').append(template(data));
 </script> --}}

@@ -3,17 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Inventory</title>
+    <title>John McKay Custom&trade; IMS</title>
 
     <!-- Mobile/Browser Compatibility -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+<!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+ 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
     <!-- ICONS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
     <!-- Personal CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
@@ -25,7 +30,7 @@
 <!-- Nav Bar (Remember, main page needs just header. After User logs in then add nav bar -->
   <nav>
     <div class="nav-wrapper black">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="/inventory" class="brand-logo">John McKay Custom</a>
       <!-- <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
@@ -36,9 +41,57 @@
     </div>
   </nav>
 
-  <main>
+
+<center>
+      <!-- <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" /> -->
+      <div class="section"></div>
+
+      <h5 class="indigo-text">Please, login into your account</h5>
+      <div class="section"></div>
+
+      <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+          <form class="col s12" method="post">
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='email' id='email' />
+                <label for='email'>Enter your email</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Enter your password</label>
+              </div>
+              <label style='float: right;'>
+                <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+              </label>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+              </div>
+            </center>
+          </form>
+        </div>
+      </div> 
+      <a href="#!">Create account</a>
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+  {{!-- <main> --}}
   <!-- Login Card -->
-  <div class="login-card">
+  {{!-- <div class="login-card">
     <div class="row">
       <div class="col s12 m5">
         <div class="card small white center">
@@ -68,7 +121,7 @@
       </div>
     </div>
   </div>
-  </main>  
+  </main>   --}}
 
 
 

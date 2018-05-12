@@ -9,6 +9,10 @@ var express = require("express");
 var bodyParser = require("body-parser");
 // Set Handlebars.
 var exphbs = require("express-handlebars");
+// var session = require("express-session");
+// // Requiring passport as we've configured it
+// var passport = require("./config/passport");
+
 
 // Sets up the Express App
 // =============================================================
@@ -56,7 +60,13 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 // Static directory
-app.use(express.static("app/public"));
+app.use("/",express.static(__dirname+"/public"));
+
+// // We need to use sessions to keep track of our user's login status
+// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+
 
 // Routes
 // =============================================================
