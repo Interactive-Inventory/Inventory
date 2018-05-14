@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
   <!-- ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+<!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
   <!-- Scripts JS -->
   <script src="assets/js/inventory.js"></script> {{!-- </head>
 <!--Nav Bar-->
@@ -259,7 +260,7 @@
       $('.modal').modal();
       $('.search-input').keydown(function (event) {
         if (event.keyCode == 13) {
-          window.location.replace('/inventory/:' + $('.search-input').val());
+          window.location.replace('/inventory/' + $('.search-input').val());
           return false;
         }
       });

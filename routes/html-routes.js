@@ -25,9 +25,20 @@ module.exports = function (app) {
   // });
 
 
-  // app.get("/", function(req, res) {
-  //     res.render(path.join(__dirname, "index", hbsObject ));
+  // POST route for saving a new todo
+  // app.post("/api/inventory", function(req, res) {
+  //   console.log(req.body);
+    // create takes an argument of an object describing the item we want to
+    // insert into our table. In this case we just we pass in an object with a text
+    // and complete property (req.body)
+  //   db.inventory.create({
+  //     text: req.body.text,
+  //     complete: req.body.complete
+  //   }).then(function(inventory) {
+  //     // We have access to the new todo as an argument inside of the callback function
+  //     res.json(inventory);
   //   });
+  // });
 
   app.get("/", function (req, res) {
     // inventory.findAll({})
@@ -89,11 +100,42 @@ module.exports = function (app) {
     }).catch(function (error) {
       console.log(error);
     });
-
-    app.post('/api/inventory', function (req, res) {
-      res.send('POST request to the homepage')
+    });
+    // app.post("/api/inventory/", function (req, res) {
+      // inventory.findAll({})
+      //   .then(function (data) {
+      //     console.log(data[0].item);
+      //     var hbsObject = {
+      //       Inventory: data,
+      //       layout: false
+      //     };
+      
+    //   console.log(req.body);
+    //   res.send('working');
+    //   // });
+    // });   
+    // POST route for saving a new item
+  app.post("/api/inventory", function(req, res) {
+    console.log(req.body);
+    db.Inventory.create({
+      item: req.body.item,
+      category: req.body.category,
+      size: req.body.size,
+      color: req.body.color,
+      quantity: req.body.quantity,
+      received: req.body.received
     })
+      .then(function(dbInventory) {
+        res.json(dbInventory);
+      });
+  }); 
 
+    //     // console.log(hbsObject);
+    //     res.render("inventory", hbsObject);
+    //   });
+  
+
+   
     // var searchTerm = req.params.id;
     // inventory.findAll({})
     //   .then(function (data) {
@@ -106,7 +148,7 @@ module.exports = function (app) {
     //     // console.log(hbsObject);
     //     res.render("inventory", hbsObject);
     //   });
-  });
+  
 
 
   // app.get("/login", function(req, res) {

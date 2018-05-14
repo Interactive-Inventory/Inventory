@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // Gets an optional query string from our url (i.e. ?post_id=23)
+  // Gets an optional query string from our url 
   var url = window.location.search;
   var postId;
   // Sets a flag for whether or not we're updating a post to be false initially
@@ -19,6 +19,7 @@ $(document).ready(function() {
   var postCategorySelect = $("#category");
   // Giving the postCategorySelect a default value
   postCategorySelect.val("Personal");
+
   // Adding an event listener for when the form is submitted
   $(cmsForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
@@ -27,10 +28,10 @@ $(document).ready(function() {
       return;
     }
     // Constructing a newPost object to hand to the database
-    var newPost = {
+    var newInventory = {
       title: titleInput.val().trim(),
-      body: bodyInput.val().trim(),
-      category: postCategorySelect.val()
+      category: postCategorySelect.val(),
+      size: bodyInsize.val().trim(),
     };
 
     console.log(newPost);
@@ -48,8 +49,8 @@ $(document).ready(function() {
 
   // Submits a new post and brings user to blog page upon completion
   function submitPost(Post) {
-    $.post("/api/posts/", Post, function() {
-      window.location.href = "/blog";
+    $.post("/api/inventory/", Post, function() {
+      window.location.href = "/inventory";
     });
   }
 

@@ -44,13 +44,13 @@ $("#add-btn").on("click", function(event){
     console.log(data);
   });
   $("#item").val();
-  $("category").val();
+  $("#category").val();
   $("#size").val();
   $("#color").val();
 
 });
 
-$.get("/api/all", function(data){
+// $.get("/api/all", function(data){
 
-})
+// })
 
