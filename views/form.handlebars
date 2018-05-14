@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
   <!-- ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- JQuery -->
+  <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <!-- Scripts JS -->
   <script src="assets/js/inventory.js"></script> {{!-- </head>
@@ -185,10 +185,19 @@
                     <input class="white" id="quantity" type="text" class="validate">
                     <label for="quantity">Quantity</label>
                   </div>
+                  <div class="input-field col s6 white">
+                    <select id='received'>
+                      <option   value="received" disabled selected>Received</option>
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                    </select>
+                    <label>Select</label>
+                  </div>
+                  {{!--
                   <div class="input-field col s6">
                     <input class="white" id="received" type="text" class="validate">
                     <label for="received">Received</label>
-                  </div>
+                  </div> --}}
 
                   <button class="btn waves-effect waves-dark" type="submit" name="action" id="submit">Submit
                     <i class="material-icons right">send</i>
@@ -299,7 +308,10 @@
       });
     });
 
-
+$(document).ready(function(){
+    $('select').formSelect();
+  });
+        
 
 
 

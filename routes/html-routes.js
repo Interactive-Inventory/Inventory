@@ -117,7 +117,7 @@ module.exports = function (app) {
     // POST route for saving a new item
   app.post("/api/inventory", function(req, res) {
     console.log(req.body);
-    db.Inventory.create({
+    inventory.create({
       item: req.body.item,
       category: req.body.category,
       size: req.body.size,
@@ -125,8 +125,8 @@ module.exports = function (app) {
       quantity: req.body.quantity,
       received: req.body.received
     })
-      .then(function(dbInventory) {
-        res.json(dbInventory);
+      .then(function(inventory) {
+        res.json(inventory);
       });
   }); 
 

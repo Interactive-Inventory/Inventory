@@ -28,7 +28,7 @@ var Inventory = sequelize.define("inventory", {
   quantity: {
     type: Sequelize.INTEGER
   },
-  recieved: {
+  received: {
     type: Sequelize.BOOLEAN
   },
   }, {
