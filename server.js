@@ -26,6 +26,7 @@ var db = require("./models/inventory.js");
 
 
 
+
 var hbs = exphbs.create({
   // Specify helpers which are only registered on this instance.
   helpers: {

@@ -27,22 +27,7 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // app.post("/inventory/item/", function (req, res) {
-  //   // inventory.findAll({})
-  //   //   .then(function (data) {
-  //   //     console.log(data[0].item);
-  //   //     var hbsObject = {
-  //   //       Inventory: data,
-  //   //       layout: false
-  //   //     };
 
-  //   //     // console.log(hbsObject);
-        
-  //   //   });
-    
-  //     console.log(req.body)
-  //     // res.json({result: 'result data'});
-  // });
 
   // GET route for getting all of the items
   // app.get("/api/inventory/", function(req, res) {
