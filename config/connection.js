@@ -6,6 +6,7 @@
 var Sequelize = require("sequelize");
 var mysql = require("mysql");
 var config = require(__dirname + "/config.json");
+console.log(config);
 
 
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
