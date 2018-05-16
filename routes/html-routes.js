@@ -68,8 +68,7 @@ module.exports = function (app) {
 
   app.get("/form", function (req, res) {
     inventory.findAll({})
-      .then(function (data) {
-        console.log(data[0].item);
+      .then(function (data) {        
         var hbsObject = {
           Inventory: data,
           layout: false
