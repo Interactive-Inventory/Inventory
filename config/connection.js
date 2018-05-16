@@ -4,6 +4,8 @@
 
 // Dependencies
 var Sequelize = require("sequelize");
+var mysql = require("mysql");
+
 
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
 if(process.env.JAWSDB_URL) {
