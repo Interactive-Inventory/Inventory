@@ -56,7 +56,6 @@ module.exports = function (app) {
   app.get("/inventory", function (req, res) {
     inventory.findAll({})
       .then(function (data) {
-        console.log(data[0].item);
         var hbsObject = {
           Inventory: data,
           layout: false
